@@ -20,7 +20,7 @@ class UserRegistrationSerializer(serializers.ModelSerializer):
     def validate_email(self, value):
         if not email_is_valid(value):
             raise serializers.ValidationError(
-                    'Please use a different email address provider.')
+                    'Please use a different email address provider.') 
 
         return value
 
