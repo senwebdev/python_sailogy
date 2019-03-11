@@ -23,7 +23,7 @@ class UserRegistrationSerializer(serializers.ModelSerializer):
                     'Please use a different email address provider.') 
 
         return value
-
+ 
 
 class UserRegistrationGoogleSerializer(UserRegistrationSerializer):
     class Meta(UserRegistrationSerializer.Meta):
