@@ -16,7 +16,7 @@ class UserRegistrationSerializer(serializers.ModelSerializer):
         user.set_password(validated_data['password'])
         user.save()
         return user 
-
+ 
     def validate_email(self, value):
         if not email_is_valid(value):
             raise serializers.ValidationError(
