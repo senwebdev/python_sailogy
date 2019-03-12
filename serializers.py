@@ -11,7 +11,7 @@ class UserRegistrationSerializer(serializers.ModelSerializer):
         fields = ('uuid', 'email', 'first_name', 'last_name',
                   'password', 'profile_picture', 'is_active')
 
-    def create(self, validated_data):
+    def create(self, validated_data): 
         user = User.objects.create(**validated_data)
         user.set_password(validated_data['password'])
         user.save()
